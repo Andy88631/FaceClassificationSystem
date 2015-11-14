@@ -9,13 +9,13 @@ end
 %%
 [categoryClassifier,class] = ImageCategoryClassificationFunction(imgSets,0.7);
 
-rootFolder = fullfile('F:\Dropbox\FaceClassificationSystem', ...
+rootFolder = fullfile('/Users/Apple/Dropbox/FaceClassificationSystem', ...
 'Database');
 
 imgSets = [imageSet(fullfile(rootFolder, 'Me')) ...
     imageSet(fullfile(rootFolder, 'Cats')), ...
-    imageSet(fullfile(rootFolder, 'Dolphin')), ...
-    imageSet(fullfile('F:\Picture', 'YiFan'))];
+    imageSet(fullfile(rootFolder, 'Dolphin'))]; 
+    %imageSet(fullfile('F:\Picture', 'YiFan'))];
 
 %% Try the Newly Trained Classifier on Test Images
 for n = 1:10
