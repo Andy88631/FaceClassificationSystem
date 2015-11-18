@@ -7,7 +7,7 @@ for n=1:10
    imwrite(img,strcat( 'A',num2str(n),'.png'));  
 end
 %%
-[categoryClassifier,class] = ImageCategoryClassificationFunction(imgSets,0.7);
+[categoryClassifier,class] = ImageCategoryClassificationFunction(imgSets,0.3); %(learning rate change at 2015/11/15 11:48)
 
 rootFolder = fullfile('/Users/Apple/Dropbox/FaceClassificationSystem', ...
 'Database');
@@ -18,7 +18,9 @@ imgSets = [imageSet(fullfile(rootFolder, 'Me')) ...
     %imageSet(fullfile('F:\Picture', 'YiFan'))];
 
 %% Try the Newly Trained Classifier on Test Images
-for n = 1:10
+    %just test the pictures from third to seventh,
+    %cause sometimes the images at begining isn't good.(change at 2015/11/14)
+for n = 3:7  
 img = imread(fullfile(rootFolder, strcat('A',num2str(n),'.png')));
 [labelIdx, scores] = predict(categoryClassifier, img);
 % Display the string label
