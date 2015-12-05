@@ -24,3 +24,6 @@ categoryClassifier = trainImageCategoryClassifier(trainingSets, bag);
 
 % Compute average accuracy
 mean(diag(confMatrix));
+%%
+filename = 'trainingData.mat';
+save(filename);

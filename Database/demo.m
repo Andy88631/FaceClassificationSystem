@@ -1,5 +1,3 @@
-
-
 %% Load Image Sets
 % Instead of operating on the entire Caltech 101 set, which can be time
 % consuming, use three categories: airplanes, ferry, and laptop.
@@ -7,7 +5,7 @@
 % each image's area must be occupied by the subject of the category, for
 % example, an object or a type of scene.
 
-rootFolder = fullfile('C:\Users\User\Desktop\FaceClassificationSystem', ...
+rootFolder = fullfile('/Users/Apple/Dropbox/FaceClassificationSystem', ...
 'Database');
 
 imgSets = [imageSet(fullfile(rootFolder, 'Me')), ...
